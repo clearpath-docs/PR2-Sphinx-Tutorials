@@ -43,6 +43,8 @@ PR2 Tutorials
     PR2ServicePortDiagnosis.rst
     UpdatingSourcesList.rst
     InstallingROSHydro.rst
+    InstallingROSIndigo.rst
+    InstallingPR2Trusty.rst
 
 
 
