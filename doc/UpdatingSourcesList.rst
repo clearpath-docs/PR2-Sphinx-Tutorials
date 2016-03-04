@@ -7,10 +7,10 @@ The first one is the official Clearpath Robotics PR2 package server located at h
 
 .. code:: bash
 
-	deb http://pr2packages.clearpathrobotics.com/pr2/ubuntu precise pr2
-	deb http://pr2packages.clearpathrobotics.com/pr2/ubuntu precise main
+	deb http://clearpathrobotics.com/pr2-packages/ubuntu trusty pr2
+	deb http://clearpathrobotics.com/pr2-packages/ubuntu trusty main
 
-If the above link doesn't work, Austin Hendrix has gracefully set up a back-up repository at:
+For Groovy installations and Hydro installations of the PR2, you will want this link:
 
 .. code:: bash
 
@@ -23,7 +23,7 @@ For installing the basestation debians, please do the above but with 'basestatio
 
 .. code:: bash
 
-	deb http://pr2packages.clearpathrobotics.com/pr2/ubuntu precise basestation
-	deb http://pr2packages.clearpathrobotics.com/pr2/ubuntu precise main
+	deb http://clearpathrobotics.com/pr2-packages/ubuntu trusty basestation
+	deb http://clearpathrobotics.com/pr2-packages/ubuntu trusty main
 
-Reminder: the packages.namniart.com repository does not have any of the new hydro debians in them.
+Reminder: the packages.namniart.com repository does not have any of the new hydro debians in them, nor the Indigo, or Kinect 2 packages in them.
