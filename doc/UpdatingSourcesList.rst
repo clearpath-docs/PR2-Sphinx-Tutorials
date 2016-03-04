@@ -5,6 +5,14 @@ There are two working debian package servers for the PR2. When packages.willowga
 
 The first one is the official Clearpath Robotics PR2 package server located at http://pr2packages.clearpathrobotics.com and those packages can be accessed by adding into your /etc/apt/sources.list.d/pr2debs.list two lines:
 
+Get your key first:
+
+.. code:: bash
+
+        sudo wget http://clearpathrobotics.com/pr2-packages/ubuntu/pr2packages.gpg | sudo apt-key add
+
+Add sources to your /etc/apt/sources.list.d/pr2-debs.list
+
 .. code:: bash
 
 	deb http://clearpathrobotics.com/pr2-packages/ubuntu trusty pr2
