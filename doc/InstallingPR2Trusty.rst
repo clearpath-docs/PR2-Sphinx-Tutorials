@@ -1,72 +1,78 @@
-Installing PR2 Trusty on An Unsupported Computer
+Installing ROS Indigo on a PR2
 ===================================================
+
+This install method assumes you have nothing installed, or wish to re-write
+the disk image you currently have on your PR2 computer. C2 is installed
+via diskless netboot and runs a non-persistent linux kernel. (e.g lost after turn off)
+
 
 Pre-install
 ------------
 
-1. Download a distribution of Ubuntu server, or Ubuntu desktop. If you choose to use Ubuntu desktop on your PR2, note that you can skip to step 13 in installation steps.
+1. Download Clonezilla and create a USB with Clonezilla on it, you will need it
+to then install the PR2 image. Follow these instructions: http://clonezilla.org/downloads.php to get the ISO
+and then use Ubuntu Start-up disk creator to create the ISO for Clonezilla
 
-2. Obtain a USB, 8GB+ in size.
+2. Set your BIOS in C1 to boot from a USB. Yes, you will need to connect a keyboard and monitor.
+Please see http://clearpathrobotics.com/guides/pr2/ConnectAMonitor
 
-3. Obtain a working internet connection and plug the ethernet cable into the wan0 port on the PR2.
+3. Pick your .tar.gz (release files) from http://clearpathrobotics.com/pr2-packages/pr2-releases/ 
 
-4. Pick a username and password for your robot and write it down.
+4. pr2-3.18.7-rt1 is the first distribution shipped. It has limited functionality.
+You can find more about what versions have what functionality on the http://clearpathrobotics.com/pr2-packages/pr2-releases/pr2-3.18.7-rt1-release-notes.txt or
+on the website wiki at https://clearpathrobotics.com/guides/pr2/ReleaseNotes. However, as of writing it is the only distribution available.
 
-5. Change your BIOS settings to be bootable from USB on C1.
+5. pr2-3.19.0-49-lowlatency should be available by March 10th, 2016.
 
-6. Change your BIOS settings on C2 so that it is booting from lan, so that the bios boot time is increased to 30+ seconds in order to hit the netboot trigger.
-
-7. Realize that you will need at least four USB connections for C2 and two network ports. 
-
-8. Realize that you will need 6 network ports, three USB ports, and a VGA/Video card for C1. You will also need a bluetooth chip and a wireless chip, integrated or external.
-
-9. Since you are using different hardware, you will need to change things in the existing distribution of the PR2 ubuntu-trusty branches from https://github.com/pr2-debs. This list is extensive, and I may have missed some things:
-- The accepted mac address for the netboot procedure
-- The mac addresses used in the udev rules for network ports 
-- Potentially, the kernel if the kernel you installed is incompatible with your hardware (Note: use a realtime kernel e.g linux-image-3.19.0-49-lowlatency)
-- I won't cover here how to do these things (yet). But I may make commands to do this easier..
-
-9.5 Install OpenSSH so you can ssh into the robot once it is plugged into the robot, either through the service port or via the lan ports in the back router of PR2
-
-10. The wireless AP settings will need to be configured if you wish to use an AP that is different than the one currently used in the PR2
-
-11. Once you have completed above, you can put the computers inside the PR2 and hook-up all of the cables. Diagrams for how to wire the backside of the PR2 can be seen below.
-
-Note: you will be able to use ROS Jade and ROS Indigo with the PR2 after you have completed all of the steps above. Some of the packages may not work, in that case
-carefully ensure you have made your hardware compatible with the PR2 Debian package software suite.
+6. Extract the contents of the .tar.gz and put them onto a USB (copy and paste). Make sure the USB is empty before you do this. You are now ready to install your PR2 Trusty Indigo with Clonezilla!
 
 
-Installing the PR2 Debians
+Installing The .tar.gz contents onto the PR2 Computer:
+----------------------------
+
+1. If you have completed above, follow these prompts to get the contents installed:
+
+
+
+
+
+Updating the contents of your new PR2 Trusty Indigo machine
 -----------------------------
 
-Add sources lists to point towards the Clearpath Robotics servers on the PR2: (alternatively, you can setup your own Jenkins/Packages server if you wish to build from source)
-
-
-sudo sh -c 'echo "deb http://www.clearpathrobotics.com/pr2-packages/ubuntu $(lsb_release -sc) main" > /etc/apt/sources.list.d/pr2trusty.list'
-
+To pull new ROS Indigo packages:
 
 .. code:: bash
 
-        
 	sudo apt-get update
-	sudo apt-get install pr2-core-hydro
-	sudo apt-get install pr2-core
+	sudo apt-get install ros-indigo-pr2-*
 
-Installing the PR2 ROS debians
--------------------------------
+To pull new PR2 Trusty Debian packages:
 
 .. code:: bash
 
-	sudo apt-get install ros-hydro-pr2*
+        sudo apt-get update
+        sudo apt-get install pr2-*
 
-**Note:** Sometimes the package management system on the PR2 or system breaks and will try to uninstall key packages. If ever asked to uninstall pr2-environment or pr2-core files. Do not say yes or the PR2 will be unable to boot and a full re-install will be required.
+** Note please do not install the NUC packages on the PR2 if you have a Kinect. Be careful when removing
+pr2-environment as it may make your system unusable.
+	
 
-The start sequence to launch the robot is still the same:
+Additionally:
+-----------------------------
+
+The start sequence to launch the robot has changed:
 
 .. code:: bash
 
-	export ROS_ENV_LOADER=/etc/ros/env.sh
-	roslaunch /etc/ros/robot.launch
+	roslaunch /etc/ros/robot.launch 
+        (optional) roslaunch /etc/ros/robot.launch c2:=false
 
-and what code/ROS debians it uses will depend on what environment the robot exists in. "robot groovy" and "robot hydro" will help change that environment back and forth.
+If you have a kinect 2 on your robot:
+
+.. code:: bash
+
+        export KINECT2=true
+        (optional) roslaunch /etc/ros/robot.launch 
+
+Note at the time of writing this, c2 was having USB issues this I chose not to enable C2, so you can pass in the parameter c2:=false
 
