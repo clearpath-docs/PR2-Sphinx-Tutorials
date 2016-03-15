@@ -47,6 +47,7 @@ PR2 Tutorials
     InstallingROSIndigo.rst
     InstallingPR2Trusty.rst
     InstallingPR2TrustyUnsupported.rst
+    InstallingTheNUC.rst
     ReleaseNotes.rst
 
 
