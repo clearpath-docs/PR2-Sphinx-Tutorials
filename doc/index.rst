@@ -1,10 +1,10 @@
-PR2 Tutorials 
-================     
+PR2 Tutorials
+================
 
 
 .. image:: chd-86.jpg
-    
- 
+
+
 .. toctree::
     :maxdepth: 0
 
@@ -47,6 +47,7 @@ PR2 Tutorials
     InstallingROSIndigo.rst
     InstallingPR2Trusty.rst
     InstallingPR2TrustyUnsupported.rst
+    SettingUpBIOS.rst
     InstallingTheNUC.rst
     ReleaseNotes.rst
 
