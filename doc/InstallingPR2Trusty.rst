@@ -22,7 +22,7 @@ Please see http://clearpathrobotics.com/guides/pr2/ConnectAMonitor
 You can find more about what versions have what functionality on the http://clearpathrobotics.com/pr2-packages/pr2-releases/pr2-3.18.7-rt1-release-notes.txt or
 on the website wiki at https://clearpathrobotics.com/guides/pr2/ReleaseNotes. However, as of writing it is the only distribution available.
 
-5. pr2-3.19.0-49-lowlatency should be available by March 10th, 2016.
+5. pr2-3.19.0-49-lowlatency should be available by March 10th, 2016. Note: Available as of March 22nd, 2016.
 
 6. Extract the contents of the .tar.gz and put them onto a USB (copy and paste). Make sure the USB is empty before you do this. You are now ready to install your PR2 Trusty Indigo with Clonezilla!
 
