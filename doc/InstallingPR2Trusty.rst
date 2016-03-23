@@ -32,7 +32,10 @@ Installing The .tar.gz contents onto the PR2 Computer:
 
 1. If you have completed above, follow these prompts to get the contents installed:
 
+http://clonezilla.org/show-live-doc-content.php?topic=clonezilla-live/doc/02_Restore_disk_image
 
+2. Follow the above instructions, and when it asks you to put in the USB, make sure you have
+downloaded the .tar.gz from the above releases and put it onto your machine (untarred), then use that image/USB to restore your C1.
 
 
 
