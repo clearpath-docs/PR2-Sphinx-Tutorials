@@ -42,9 +42,8 @@ PR2 Tutorials
     ReinstallingPR2.rst
     PR2ServicePortDiagnosis.rst
     UpdatingSourcesList.rst
-    ConnectAMonitor.rst
     InstallingROSHydro.rst
-    InstallingROSIndigo.rst
+    InstallingPR2Indigo.rst
     InstallingPR2Trusty.rst
     InstallingPR2TrustyUnsupported.rst
     SettingUpBIOS.rst

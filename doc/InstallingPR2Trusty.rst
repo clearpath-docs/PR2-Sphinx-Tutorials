@@ -28,7 +28,7 @@ on the website wiki at https://clearpathrobotics.com/guides/pr2/ReleaseNotes. Ho
 
 
 Installing The .tar.gz contents onto the PR2 Computer:
-----------------------------
+--------------------------------------------------------
 
 1. If you have completed above, follow these prompts to get the contents installed:
 
@@ -40,7 +40,7 @@ downloaded the .tar.gz from the above releases and put it onto your machine (unt
 
 
 Updating the contents of your new PR2 Trusty Indigo machine
------------------------------
+-------------------------------------------------------------
 
 To pull new ROS Indigo packages:
 

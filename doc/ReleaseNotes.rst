@@ -1,5 +1,5 @@
 Patch notes for release 3.18.7-rt1 (March 10th, 2016)
-===================================================
+======================================================
 
 -> Bare bones system
 -> C1 boots with the capability to teleop the robot via keyboard
@@ -7,7 +7,7 @@ Patch notes for release 3.18.7-rt1 (March 10th, 2016)
 -> No wireless or VPN capabilities. 
 
 Patch notes for PR2 Head NUC release 3.19.0-33 (March 15th, 2016)
-===================================================
+===================================================================
 
 -> Works for getting the Kinect setup
 -> Packages for setup on C1 can be found at https://github.com/pr2-debs
@@ -16,7 +16,7 @@ Patch notes for PR2 Head NUC release 3.19.0-33 (March 15th, 2016)
 
 
 Patch notes for release 3.19.0-49 (March 22nd, 2016)
-===================================================
+========================================================
 
 -> Fairly stable system, C2 boots, C1 boots.
 -> Wireless capabilities are disabled
@@ -26,7 +26,7 @@ Patch notes for release 3.19.0-49 (March 22nd, 2016)
 
 
 Patch notes for release 3.19.0-49 (March 24th, 2016) (Suggested)
-===================================================
+==================================================================
 
 -> All of the advancements above, including the ability to use
 the sensors on C2 with a hub (shipped via clearpath) into the top USB port on C2
