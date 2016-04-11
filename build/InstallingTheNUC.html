@@ -1,0 +1,306 @@
+
+
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Installing an Image to the NUC &mdash; PR2 Tutorials 0.5.1 documentation</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="_static/favicon.ico"/>
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="_static/clearpath.css" type="text/css" />
+  
+
+  
+    <link rel="top" title="PR2 Tutorials 0.5.1 documentation" href="index.html"/>
+        <link rel="next" title="Release Notes" href="ReleaseNotes.html"/>
+        <link rel="prev" title="Setting Up the BIOS for Netbooting" href="SettingUpBIOS.html"/> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+  <!-- Start of clearpathrobotics Zendesk Widget script -->
+<script>/*<![CDATA[​*/window.zEmbed||function(e,t){var n,o,d,i,s,a=[],r=document.createElement("iframe");window.zEmbed=function(){a.push(arguments)},window.zE=window.zE||window.zEmbed,r.src="javascript:false",r.title="",r.role="presentation",(r.frameElement||r).style.cssText="display: none",d=document.getElementsByTagName("script"),d=d[d.length-1],d.parentNode.insertBefore(r,d),i=r.contentWindow,s=i.document;try{o=s}catch(c){n=document.domain,r.src='javascript:var d=document.open();d.domain="'+n+'";void(0);',o=s}o.open()._l=function(){var o=this.createElement("script");n&&(this.domain=n),o.id="js-iframe-async",o.src=e,this.t=+new Date,this.zendeskHost=t,this.zEQueue=a,this.body.appendChild(o)},o.write('<body onload="document._l();">'),o.close()}("https://assets.zendesk.com/embeddable_framework/main.js","clearpathrobotics.zendesk.com");/*​]]>*/</script>
+<!-- End of clearpathrobotics Zendesk Widget script -->
+
+<script>
+ (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+ (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+ m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+ })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ ga('create', 'UA-65409991-1', 'auto');
+ ga('send', 'pageview');
+
+</script>
+
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html" class="icon icon-home"> PR2 Tutorials
+          
+
+          
+            
+            <img src="_static/clearpathlogo.png" class="logo" />
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.5.1
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search..." />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul class="simple">
+</ul>
+<p class="caption"><span class="caption-text">Getting Started with PR2 Development</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="Resources.html">Resources</a></li>
+<li class="toctree-l1"><a class="reference internal" href="DebuggingPR2Software.html">Debugging the PR2&#8217;s Software</a></li>
+<li class="toctree-l1"><a class="reference internal" href="PR2Developer.html">PR2 Developer Environment</a></li>
+<li class="toctree-l1"><a class="reference internal" href="BuildingPR2Debians.html">Building PR2 Debians</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ReleasingROSPackage.html">Releasing a PR2 ROS Package</a></li>
+</ul>
+<p class="caption"><span class="caption-text">PR2 Support</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="WillowGarageTransition.html">Willow Garage to Clearpath Robotics PR2 Transition FAQ</a></li>
+<li class="toctree-l1"><a class="reference internal" href="PR2 Safety.html">PR2 Safety</a></li>
+<li class="toctree-l1"><a class="reference internal" href="SubmitSupportTicket.html">Submit a Support Ticket</a></li>
+<li class="toctree-l1"><a class="reference internal" href="PR2GoogleGroup.html">PR2 Google Group &amp; PR2 Mailing List</a></li>
+<li class="toctree-l1"><a class="reference internal" href="PR2Downloads.html">PR2 Downloads</a></li>
+<li class="toctree-l1"><a class="reference internal" href="PR2Repairs.html">PR2 Repairs</a></li>
+</ul>
+<p class="caption"><span class="caption-text">PR2 Software</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="IndigoChecklist.html">Indigo Checklist</a></li>
+<li class="toctree-l1"><a class="reference internal" href="IndigoChecklist.html#outstanding-items">Outstanding items:</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ReinstallingPR2.html">Reinstalling the PR2 (Fix)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="PR2ServicePortDiagnosis.html">PR2 Service Port Diagnosis and Remove KVM</a></li>
+<li class="toctree-l1"><a class="reference internal" href="UpdatingSourcesList.html">Updating the Sources List for PR2 Debian Packages</a></li>
+<li class="toctree-l1"><a class="reference internal" href="InstallingROSHydro.html">Installing ROS Hydro on a PR2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="InstallingPR2Indigo.html">Installing ROS Indigo on a PR2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="InstallingPR2Trusty.html">Installing ROS Indigo on a PR2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="InstallingPR2TrustyUnsupported.html">Installing PR2 Trusty on An Unsupported Computer</a></li>
+<li class="toctree-l1"><a class="reference internal" href="SettingUpBIOS.html">Setting Up the BIOS for Netbooting</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="">Installing an Image to the NUC</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ReleaseNotes.html">Release Notes</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="index.html">PR2 Tutorials</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+     
+          
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="http://support.clearpathrobotics.com">Home</a> &raquo;</li>
+      
+    <li>Installing an Image to the NUC</li>
+      <li class="wy-breadcrumbs-aside">
+        <div class="roslogo">
+      </div>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="installing-an-image-to-the-nuc">
+<h1>Installing an Image to the NUC<a class="headerlink" href="#installing-an-image-to-the-nuc" title="Permalink to this headline">¶</a></h1>
+<p>The process to install a previously-cloned image to the NUC is quite simple. All that is required are two USBs.</p>
+<ol class="arabic simple">
+<li>Create a bootable Clonezilla Live USB (<a class="reference external" href="http://clonezilla.org/clonezilla-live.php#make">http://clonezilla.org/clonezilla-live.php#make</a>).</li>
+<li>Download the pr2-head tarball from the PR2 packages server (<a class="reference external" href="http://www.clearpathrobotics.com/pr2-packages/pr2-releases">http://www.clearpathrobotics.com/pr2-packages/pr2-releases</a>) and unpack it on another USB.</li>
+<li>Plug in the USB into the NUC and boot off of the Clonezilla Live USB. Press F10 when the NUC boots up to enter into the boot media menu and select the Clonezilla Live USB.</li>
+<li>Select the Clonezilla Live setting in the menu and wait for the next menu to show up.</li>
+</ol>
+<img alt="Clonezilla Live start screen." src="_images/start_screen.jpg" />
+<ol class="arabic simple" start="5">
+<li>Select a language to use (use arrow keys and enter).</li>
+<li>Select &#8220;Don&#8217;t touch keymap&#8221; on the &#8220;Configuring console-data&#8221; menu.</li>
+<li>Select &#8220;Start_Clonezilla&#8221;.</li>
+</ol>
+<img alt="Choose how to start Clonezilla." src="_images/start_clonezilla.jpg" />
+<ol class="arabic simple" start="8">
+<li>Select &#8220;device-image&#8221; to clone the image onto your NUC (Note the hint: press space to mark selections on menu with multiple options)</li>
+</ol>
+<img alt="Choosing device-image for the Clonezilla process." src="_images/device_image.jpg" />
+<ol class="arabic simple" start="9">
+<li>Choose &#8220;local_dev&#8221; from the &#8220;Mount Clonezilla image directory&#8221; menu.</li>
+</ol>
+<img alt="Choosing local_dev for where Clonezilla will look for the image." src="_images/local_dev.jpg" />
+<ol class="arabic simple" start="10">
+<li>Plug in the non-Clonezilla USB, wait 5 seconds, then press enter.</li>
+</ol>
+<img alt="At this screen, insert the other USB." src="_images/insert_usb.jpg" />
+<ol class="arabic simple" start="11">
+<li>Select the USB from the list of disks. It will be the volume listed as something like &#8220;sdb1&#8221; or &#8220;sdc1&#8221;.</li>
+</ol>
+<img alt="Choosing the USB's disk." src="_images/choose_device.jpg" />
+<ol class="arabic simple" start="12">
+<li>Select the &#8220;/&#8221; directory from next menu.</li>
+<li>After a list of information about the disk, press enter then select the &#8220;Beginner&#8221; option.</li>
+<li>Select the &#8220;restoredisk&#8221; option from the next menu. Ensure you select the correct option on this step!</li>
+</ol>
+<img alt="The correct option to clone onto the NUC." src="_images/restoredisk.jpg" />
+<ol class="arabic simple" start="15">
+<li>Select the pr2-head image file and the drive you want to clone the image to, then press enter to continue.</li>
+<li>Press &#8220;y&#8221; then enter for the next few prompts.</li>
+<li>Wait until the process completes by itself.</li>
+<li>After the process completes, the following screen will show up. Press enter.</li>
+</ol>
+<img alt="The ending screen." src="_images/clone_finish.jpg" />
+<ol class="arabic simple" start="19">
+<li>Select &#8220;poweroff&#8221; and turn off the NUC. After the NUC is off, remove the two USBs.</li>
+</ol>
+<img alt="Turning off the NUC." src="_images/poweroff.jpg" />
+<ol class="arabic simple" start="20">
+<li>Power on the NUC. You&#8217;re done! Your NUC should now be fully functional!</li>
+</ol>
+<img alt="The login screen after rebooting the NUC." src="_images/done.jpg" />
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="ReleaseNotes.html" class="btn btn-neutral float-right" title="Release Notes" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="SettingUpBIOS.html" class="btn btn-neutral" title="Setting Up the BIOS for Netbooting" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2015, Clearpath Robotics.
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'0.5.1',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

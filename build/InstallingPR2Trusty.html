@@ -1,0 +1,320 @@
+
+
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Installing ROS Indigo on a PR2 &mdash; PR2 Tutorials 0.5.1 documentation</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="_static/favicon.ico"/>
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="_static/clearpath.css" type="text/css" />
+  
+
+  
+    <link rel="top" title="PR2 Tutorials 0.5.1 documentation" href="index.html"/>
+        <link rel="next" title="Installing PR2 Trusty on An Unsupported Computer" href="InstallingPR2TrustyUnsupported.html"/>
+        <link rel="prev" title="Installing ROS Indigo on a PR2" href="InstallingPR2Indigo.html"/> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+  <!-- Start of clearpathrobotics Zendesk Widget script -->
+<script>/*<![CDATA[​*/window.zEmbed||function(e,t){var n,o,d,i,s,a=[],r=document.createElement("iframe");window.zEmbed=function(){a.push(arguments)},window.zE=window.zE||window.zEmbed,r.src="javascript:false",r.title="",r.role="presentation",(r.frameElement||r).style.cssText="display: none",d=document.getElementsByTagName("script"),d=d[d.length-1],d.parentNode.insertBefore(r,d),i=r.contentWindow,s=i.document;try{o=s}catch(c){n=document.domain,r.src='javascript:var d=document.open();d.domain="'+n+'";void(0);',o=s}o.open()._l=function(){var o=this.createElement("script");n&&(this.domain=n),o.id="js-iframe-async",o.src=e,this.t=+new Date,this.zendeskHost=t,this.zEQueue=a,this.body.appendChild(o)},o.write('<body onload="document._l();">'),o.close()}("https://assets.zendesk.com/embeddable_framework/main.js","clearpathrobotics.zendesk.com");/*​]]>*/</script>
+<!-- End of clearpathrobotics Zendesk Widget script -->
+
+<script>
+ (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+ (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+ m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+ })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ ga('create', 'UA-65409991-1', 'auto');
+ ga('send', 'pageview');
+
+</script>
+
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html" class="icon icon-home"> PR2 Tutorials
+          
+
+          
+            
+            <img src="_static/clearpathlogo.png" class="logo" />
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.5.1
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search..." />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul class="simple">
+</ul>
+<p class="caption"><span class="caption-text">Getting Started with PR2 Development</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="Resources.html">Resources</a></li>
+<li class="toctree-l1"><a class="reference internal" href="DebuggingPR2Software.html">Debugging the PR2&#8217;s Software</a></li>
+<li class="toctree-l1"><a class="reference internal" href="PR2Developer.html">PR2 Developer Environment</a></li>
+<li class="toctree-l1"><a class="reference internal" href="BuildingPR2Debians.html">Building PR2 Debians</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ReleasingROSPackage.html">Releasing a PR2 ROS Package</a></li>
+</ul>
+<p class="caption"><span class="caption-text">PR2 Support</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="WillowGarageTransition.html">Willow Garage to Clearpath Robotics PR2 Transition FAQ</a></li>
+<li class="toctree-l1"><a class="reference internal" href="PR2 Safety.html">PR2 Safety</a></li>
+<li class="toctree-l1"><a class="reference internal" href="SubmitSupportTicket.html">Submit a Support Ticket</a></li>
+<li class="toctree-l1"><a class="reference internal" href="PR2GoogleGroup.html">PR2 Google Group &amp; PR2 Mailing List</a></li>
+<li class="toctree-l1"><a class="reference internal" href="PR2Downloads.html">PR2 Downloads</a></li>
+<li class="toctree-l1"><a class="reference internal" href="PR2Repairs.html">PR2 Repairs</a></li>
+</ul>
+<p class="caption"><span class="caption-text">PR2 Software</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="IndigoChecklist.html">Indigo Checklist</a></li>
+<li class="toctree-l1"><a class="reference internal" href="IndigoChecklist.html#outstanding-items">Outstanding items:</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ReinstallingPR2.html">Reinstalling the PR2 (Fix)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="PR2ServicePortDiagnosis.html">PR2 Service Port Diagnosis and Remove KVM</a></li>
+<li class="toctree-l1"><a class="reference internal" href="UpdatingSourcesList.html">Updating the Sources List for PR2 Debian Packages</a></li>
+<li class="toctree-l1"><a class="reference internal" href="InstallingROSHydro.html">Installing ROS Hydro on a PR2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="InstallingPR2Indigo.html">Installing ROS Indigo on a PR2</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="">Installing ROS Indigo on a PR2</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#pre-install">Pre-install</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#installing-the-tar-gz-contents-onto-the-pr2-computer">Installing The .tar.gz contents onto the PR2 Computer:</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#updating-the-contents-of-your-new-pr2-trusty-indigo-machine">Updating the contents of your new PR2 Trusty Indigo machine</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#additionally">Additionally:</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="InstallingPR2TrustyUnsupported.html">Installing PR2 Trusty on An Unsupported Computer</a></li>
+<li class="toctree-l1"><a class="reference internal" href="SettingUpBIOS.html">Setting Up the BIOS for Netbooting</a></li>
+<li class="toctree-l1"><a class="reference internal" href="InstallingTheNUC.html">Installing an Image to the NUC</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ReleaseNotes.html">Release Notes</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="index.html">PR2 Tutorials</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+     
+          
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="http://support.clearpathrobotics.com">Home</a> &raquo;</li>
+      
+    <li>Installing ROS Indigo on a PR2</li>
+      <li class="wy-breadcrumbs-aside">
+        <div class="roslogo">
+      </div>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="installing-ros-indigo-on-a-pr2">
+<h1>Installing ROS Indigo on a PR2<a class="headerlink" href="#installing-ros-indigo-on-a-pr2" title="Permalink to this headline">¶</a></h1>
+<p>This install method assumes you have nothing installed, or wish to re-write
+the disk image you currently have on your PR2 computer. C2 is installed
+via diskless netboot and runs a non-persistent linux kernel. (e.g lost after turn off)</p>
+<div class="section" id="pre-install">
+<h2>Pre-install<a class="headerlink" href="#pre-install" title="Permalink to this headline">¶</a></h2>
+<p>1. Download Clonezilla and create a USB with Clonezilla on it, you will need it
+to then install the PR2 image. Follow these instructions: <a class="reference external" href="http://clonezilla.org/downloads.php">http://clonezilla.org/downloads.php</a> to get the ISO
+and then use Ubuntu Start-up disk creator to create the ISO for Clonezilla</p>
+<p>2. Set your BIOS in C1 to boot from a USB. Yes, you will need to connect a keyboard and monitor.
+Please see <a class="reference external" href="http://clearpathrobotics.com/guides/pr2/ConnectAMonitor">http://clearpathrobotics.com/guides/pr2/ConnectAMonitor</a></p>
+<ol class="arabic simple" start="3">
+<li>Pick your .tar.gz (release files) from <a class="reference external" href="http://clearpathrobotics.com/pr2-packages/pr2-releases/">http://clearpathrobotics.com/pr2-packages/pr2-releases/</a></li>
+</ol>
+<p>4. pr2-3.18.7-rt1 is the first distribution shipped. It has limited functionality.
+You can find more about what versions have what functionality on the <a class="reference external" href="http://clearpathrobotics.com/pr2-packages/pr2-releases/pr2-3.18.7-rt1-release-notes.txt">http://clearpathrobotics.com/pr2-packages/pr2-releases/pr2-3.18.7-rt1-release-notes.txt</a> or
+on the website wiki at <a class="reference external" href="https://clearpathrobotics.com/guides/pr2/ReleaseNotes">https://clearpathrobotics.com/guides/pr2/ReleaseNotes</a>. However, as of writing it is the only distribution available.</p>
+<ol class="arabic simple" start="5">
+<li>pr2-3.19.0-49-lowlatency should be available by March 10th, 2016. Note: Available as of March 22nd, 2016. (<a class="reference external" href="http://ec2-52-37-150-147.us-west-2.compute.amazonaws.com/pr2-releases/pr2-3.19.0-49-lowlatency-mar22-img.tar.gz">http://ec2-52-37-150-147.us-west-2.compute.amazonaws.com/pr2-releases/pr2-3.19.0-49-lowlatency-mar22-img.tar.gz</a>)</li>
+<li>Extract the contents of the .tar.gz and put them onto a USB (copy and paste). Make sure the USB is empty before you do this. You are now ready to install your PR2 Trusty Indigo with Clonezilla!</li>
+</ol>
+</div>
+<div class="section" id="installing-the-tar-gz-contents-onto-the-pr2-computer">
+<h2>Installing The .tar.gz contents onto the PR2 Computer:<a class="headerlink" href="#installing-the-tar-gz-contents-onto-the-pr2-computer" title="Permalink to this headline">¶</a></h2>
+<ol class="arabic simple">
+<li>If you have completed above, follow these prompts to get the contents installed:</li>
+</ol>
+<p><a class="reference external" href="http://clonezilla.org/show-live-doc-content.php?topic=clonezilla-live/doc/02_Restore_disk_image">http://clonezilla.org/show-live-doc-content.php?topic=clonezilla-live/doc/02_Restore_disk_image</a></p>
+<p>2. Follow the above instructions, and when it asks you to put in the USB, make sure you have
+downloaded the .tar.gz from the above releases and put it onto your machine (untarred), then use that image/USB to restore your C1.</p>
+</div>
+<div class="section" id="updating-the-contents-of-your-new-pr2-trusty-indigo-machine">
+<h2>Updating the contents of your new PR2 Trusty Indigo machine<a class="headerlink" href="#updating-the-contents-of-your-new-pr2-trusty-indigo-machine" title="Permalink to this headline">¶</a></h2>
+<p>To pull new ROS Indigo packages:</p>
+<div class="code bash highlight-python"><div class="highlight"><pre>sudo apt-get update
+sudo apt-get install ros-indigo-pr2-*
+</pre></div>
+</div>
+<p>To pull new PR2 Trusty Debian packages:</p>
+<div class="code bash highlight-python"><div class="highlight"><pre>sudo apt-get update
+sudo apt-get install pr2-*
+</pre></div>
+</div>
+<p>** Note please do not install the NUC packages on the PR2 if you have a Kinect. Be careful when removing
+pr2-environment as it may make your system unusable.</p>
+</div>
+<div class="section" id="additionally">
+<h2>Additionally:<a class="headerlink" href="#additionally" title="Permalink to this headline">¶</a></h2>
+<p>The start sequence to launch the robot has changed:</p>
+<div class="code bash highlight-python"><div class="highlight"><pre>roslaunch /etc/ros/robot.launch
+(optional) roslaunch /etc/ros/robot.launch c2:=false
+</pre></div>
+</div>
+<p>If you have a kinect 2 on your robot:</p>
+<div class="code bash highlight-python"><div class="highlight"><pre>export KINECT2=true
+(optional) roslaunch /etc/ros/robot.launch
+</pre></div>
+</div>
+<p>Note at the time of writing this, c2 was having USB issues this I chose not to enable C2, so you can pass in the parameter c2:=false</p>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="InstallingPR2TrustyUnsupported.html" class="btn btn-neutral float-right" title="Installing PR2 Trusty on An Unsupported Computer" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="InstallingPR2Indigo.html" class="btn btn-neutral" title="Installing ROS Indigo on a PR2" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2015, Clearpath Robotics.
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'0.5.1',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

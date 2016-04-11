@@ -1,0 +1,277 @@
+
+
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Setting Up the BIOS for Netbooting &mdash; PR2 Tutorials 0.5.1 documentation</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="_static/favicon.ico"/>
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="_static/clearpath.css" type="text/css" />
+  
+
+  
+    <link rel="top" title="PR2 Tutorials 0.5.1 documentation" href="index.html"/>
+        <link rel="next" title="Installing an Image to the NUC" href="InstallingTheNUC.html"/>
+        <link rel="prev" title="Installing PR2 Trusty on An Unsupported Computer" href="InstallingPR2TrustyUnsupported.html"/> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+  <!-- Start of clearpathrobotics Zendesk Widget script -->
+<script>/*<![CDATA[​*/window.zEmbed||function(e,t){var n,o,d,i,s,a=[],r=document.createElement("iframe");window.zEmbed=function(){a.push(arguments)},window.zE=window.zE||window.zEmbed,r.src="javascript:false",r.title="",r.role="presentation",(r.frameElement||r).style.cssText="display: none",d=document.getElementsByTagName("script"),d=d[d.length-1],d.parentNode.insertBefore(r,d),i=r.contentWindow,s=i.document;try{o=s}catch(c){n=document.domain,r.src='javascript:var d=document.open();d.domain="'+n+'";void(0);',o=s}o.open()._l=function(){var o=this.createElement("script");n&&(this.domain=n),o.id="js-iframe-async",o.src=e,this.t=+new Date,this.zendeskHost=t,this.zEQueue=a,this.body.appendChild(o)},o.write('<body onload="document._l();">'),o.close()}("https://assets.zendesk.com/embeddable_framework/main.js","clearpathrobotics.zendesk.com");/*​]]>*/</script>
+<!-- End of clearpathrobotics Zendesk Widget script -->
+
+<script>
+ (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+ (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+ m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+ })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ ga('create', 'UA-65409991-1', 'auto');
+ ga('send', 'pageview');
+
+</script>
+
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html" class="icon icon-home"> PR2 Tutorials
+          
+
+          
+            
+            <img src="_static/clearpathlogo.png" class="logo" />
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.5.1
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search..." />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul class="simple">
+</ul>
+<p class="caption"><span class="caption-text">Getting Started with PR2 Development</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="Resources.html">Resources</a></li>
+<li class="toctree-l1"><a class="reference internal" href="DebuggingPR2Software.html">Debugging the PR2&#8217;s Software</a></li>
+<li class="toctree-l1"><a class="reference internal" href="PR2Developer.html">PR2 Developer Environment</a></li>
+<li class="toctree-l1"><a class="reference internal" href="BuildingPR2Debians.html">Building PR2 Debians</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ReleasingROSPackage.html">Releasing a PR2 ROS Package</a></li>
+</ul>
+<p class="caption"><span class="caption-text">PR2 Support</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="WillowGarageTransition.html">Willow Garage to Clearpath Robotics PR2 Transition FAQ</a></li>
+<li class="toctree-l1"><a class="reference internal" href="PR2 Safety.html">PR2 Safety</a></li>
+<li class="toctree-l1"><a class="reference internal" href="SubmitSupportTicket.html">Submit a Support Ticket</a></li>
+<li class="toctree-l1"><a class="reference internal" href="PR2GoogleGroup.html">PR2 Google Group &amp; PR2 Mailing List</a></li>
+<li class="toctree-l1"><a class="reference internal" href="PR2Downloads.html">PR2 Downloads</a></li>
+<li class="toctree-l1"><a class="reference internal" href="PR2Repairs.html">PR2 Repairs</a></li>
+</ul>
+<p class="caption"><span class="caption-text">PR2 Software</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="IndigoChecklist.html">Indigo Checklist</a></li>
+<li class="toctree-l1"><a class="reference internal" href="IndigoChecklist.html#outstanding-items">Outstanding items:</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ReinstallingPR2.html">Reinstalling the PR2 (Fix)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="PR2ServicePortDiagnosis.html">PR2 Service Port Diagnosis and Remove KVM</a></li>
+<li class="toctree-l1"><a class="reference internal" href="UpdatingSourcesList.html">Updating the Sources List for PR2 Debian Packages</a></li>
+<li class="toctree-l1"><a class="reference internal" href="InstallingROSHydro.html">Installing ROS Hydro on a PR2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="InstallingPR2Indigo.html">Installing ROS Indigo on a PR2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="InstallingPR2Trusty.html">Installing ROS Indigo on a PR2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="InstallingPR2TrustyUnsupported.html">Installing PR2 Trusty on An Unsupported Computer</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="">Setting Up the BIOS for Netbooting</a></li>
+<li class="toctree-l1"><a class="reference internal" href="InstallingTheNUC.html">Installing an Image to the NUC</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ReleaseNotes.html">Release Notes</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="index.html">PR2 Tutorials</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+     
+          
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="http://support.clearpathrobotics.com">Home</a> &raquo;</li>
+      
+    <li>Setting Up the BIOS for Netbooting</li>
+      <li class="wy-breadcrumbs-aside">
+        <div class="roslogo">
+      </div>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="setting-up-the-bios-for-netbooting">
+<h1>Setting Up the BIOS for Netbooting<a class="headerlink" href="#setting-up-the-bios-for-netbooting" title="Permalink to this headline">¶</a></h1>
+<ol class="arabic simple">
+<li>Turn on the computer and as you see the ASRock logo come up on the display, hit F2 repeatedly to enter the UEFI menu.</li>
+<li>In the UEFI menu, navigate to the &#8220;Tools&#8221; menu using the left and right arrow keys. Once in the menu, use the up and down arrow keys to get to &#8220;Boot Manager&#8221; and press enter.</li>
+</ol>
+<img alt="The Boot Manager setting." src="_images/boot_manager.jpg" />
+<ol class="arabic simple" start="3">
+<li>In the Boot Manager menu, change &#8220;Timeout seconds&#8221; to 30 by typing in the box, then press escape to get back to the Tool menu.</li>
+</ol>
+<img alt="Changing timeout seconds to 30 seconds." src="_images/timeout.jpg" />
+<ol class="arabic simple" start="4">
+<li>Using the left and right arrow keys again, navigate to the &#8220;Boot&#8221; menu.</li>
+<li>In the Boot menu, go down to &#8220;Boot from onboard LAN&#8221; and press enter, then enable the setting and press enter again.</li>
+</ol>
+<img alt="Changing timeout seconds to 30 seconds." src="_images/boot_from_lan.jpg" />
+<ol class="arabic simple" start="6">
+<li>Next, ensure &#8220;Fast boot&#8221; is disabled.</li>
+<li>Go up to the top of the menu and find the &#8220;Boot Option Priorities&#8221; list. For the first boot option, press enter and set it to &#8220;IBA GE Slot ...&#8221; to turn on netbooting. Turn off all the other boot options by disabling them.</li>
+</ol>
+<img alt="Enabling &quot;IBA GE Slot ...&quot;, or booting from the network card." src="_images/boot_options.jpg" />
+<ol class="arabic simple" start="8">
+<li>BIOS setup should be complete at this point. Go to the &#8220;Exit&#8221; menu and select &#8220;Save Changes and Exit&#8221; then make sure you select the correct option to save your changes.</li>
+</ol>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="InstallingTheNUC.html" class="btn btn-neutral float-right" title="Installing an Image to the NUC" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="InstallingPR2TrustyUnsupported.html" class="btn btn-neutral" title="Installing PR2 Trusty on An Unsupported Computer" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2015, Clearpath Robotics.
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'0.5.1',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

@@ -1,0 +1,364 @@
+
+
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>PR2 Developer Environment &mdash; PR2 Tutorials 0.5.1 documentation</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="_static/favicon.ico"/>
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="_static/clearpath.css" type="text/css" />
+  
+
+  
+    <link rel="top" title="PR2 Tutorials 0.5.1 documentation" href="index.html"/>
+        <link rel="next" title="Building PR2 Debians" href="BuildingPR2Debians.html"/>
+        <link rel="prev" title="Debugging the PR2’s Software" href="DebuggingPR2Software.html"/> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+  <!-- Start of clearpathrobotics Zendesk Widget script -->
+<script>/*<![CDATA[​*/window.zEmbed||function(e,t){var n,o,d,i,s,a=[],r=document.createElement("iframe");window.zEmbed=function(){a.push(arguments)},window.zE=window.zE||window.zEmbed,r.src="javascript:false",r.title="",r.role="presentation",(r.frameElement||r).style.cssText="display: none",d=document.getElementsByTagName("script"),d=d[d.length-1],d.parentNode.insertBefore(r,d),i=r.contentWindow,s=i.document;try{o=s}catch(c){n=document.domain,r.src='javascript:var d=document.open();d.domain="'+n+'";void(0);',o=s}o.open()._l=function(){var o=this.createElement("script");n&&(this.domain=n),o.id="js-iframe-async",o.src=e,this.t=+new Date,this.zendeskHost=t,this.zEQueue=a,this.body.appendChild(o)},o.write('<body onload="document._l();">'),o.close()}("https://assets.zendesk.com/embeddable_framework/main.js","clearpathrobotics.zendesk.com");/*​]]>*/</script>
+<!-- End of clearpathrobotics Zendesk Widget script -->
+
+<script>
+ (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+ (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+ m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+ })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ ga('create', 'UA-65409991-1', 'auto');
+ ga('send', 'pageview');
+
+</script>
+
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html" class="icon icon-home"> PR2 Tutorials
+          
+
+          
+            
+            <img src="_static/clearpathlogo.png" class="logo" />
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.5.1
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search..." />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul class="simple">
+</ul>
+<p class="caption"><span class="caption-text">Getting Started with PR2 Development</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="Resources.html">Resources</a></li>
+<li class="toctree-l1"><a class="reference internal" href="DebuggingPR2Software.html">Debugging the PR2&#8217;s Software</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="">PR2 Developer Environment</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#setting-up-a-pr2-developer-environment-on-your-laptop">Setting up a PR2 Developer Environment on your laptop</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#setting-up-a-pr2-debian-development-environment">Setting up a PR2 Debian Development Environment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#building-and-modifying-the-system-debs">Building And Modifying The System Debs</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="BuildingPR2Debians.html">Building PR2 Debians</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ReleasingROSPackage.html">Releasing a PR2 ROS Package</a></li>
+</ul>
+<p class="caption"><span class="caption-text">PR2 Support</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="WillowGarageTransition.html">Willow Garage to Clearpath Robotics PR2 Transition FAQ</a></li>
+<li class="toctree-l1"><a class="reference internal" href="PR2 Safety.html">PR2 Safety</a></li>
+<li class="toctree-l1"><a class="reference internal" href="SubmitSupportTicket.html">Submit a Support Ticket</a></li>
+<li class="toctree-l1"><a class="reference internal" href="PR2GoogleGroup.html">PR2 Google Group &amp; PR2 Mailing List</a></li>
+<li class="toctree-l1"><a class="reference internal" href="PR2Downloads.html">PR2 Downloads</a></li>
+<li class="toctree-l1"><a class="reference internal" href="PR2Repairs.html">PR2 Repairs</a></li>
+</ul>
+<p class="caption"><span class="caption-text">PR2 Software</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="IndigoChecklist.html">Indigo Checklist</a></li>
+<li class="toctree-l1"><a class="reference internal" href="IndigoChecklist.html#outstanding-items">Outstanding items:</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ReinstallingPR2.html">Reinstalling the PR2 (Fix)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="PR2ServicePortDiagnosis.html">PR2 Service Port Diagnosis and Remove KVM</a></li>
+<li class="toctree-l1"><a class="reference internal" href="UpdatingSourcesList.html">Updating the Sources List for PR2 Debian Packages</a></li>
+<li class="toctree-l1"><a class="reference internal" href="InstallingROSHydro.html">Installing ROS Hydro on a PR2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="InstallingPR2Indigo.html">Installing ROS Indigo on a PR2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="InstallingPR2Trusty.html">Installing ROS Indigo on a PR2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="InstallingPR2TrustyUnsupported.html">Installing PR2 Trusty on An Unsupported Computer</a></li>
+<li class="toctree-l1"><a class="reference internal" href="SettingUpBIOS.html">Setting Up the BIOS for Netbooting</a></li>
+<li class="toctree-l1"><a class="reference internal" href="InstallingTheNUC.html">Installing an Image to the NUC</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ReleaseNotes.html">Release Notes</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="index.html">PR2 Tutorials</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+     
+          
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="http://support.clearpathrobotics.com">Home</a> &raquo;</li>
+      
+    <li>PR2 Developer Environment</li>
+      <li class="wy-breadcrumbs-aside">
+        <div class="roslogo">
+      </div>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="pr2-developer-environment">
+<h1>PR2 Developer Environment<a class="headerlink" href="#pr2-developer-environment" title="Permalink to this headline">¶</a></h1>
+<p>You&#8217;re all ready to set up the developer environment. What is required? Just a laptop. That&#8217;s right. Unless you want to install source code directly onto the PR2. I&#8217;ll go over that too. That brings us two sections for this tutorial.</p>
+<ol class="arabic simple">
+<li>Setting up a PR2 ROS Developer Environment on your Laptop And PR2</li>
+<li>Setting up a PR2 Debian Development Environment on your Laptop And PR2</li>
+</ol>
+<div class="section" id="setting-up-a-pr2-developer-environment-on-your-laptop">
+<h2>Setting up a PR2 Developer Environment on your laptop<a class="headerlink" href="#setting-up-a-pr2-developer-environment-on-your-laptop" title="Permalink to this headline">¶</a></h2>
+<p>Assuming ROS is installed. If not, see this: <a class="reference external" href="http://wiki.ros.org/ROS/Installation">http://wiki.ros.org/ROS/Installation</a>. At the time of this tutorial, the PR2 works with up to Hydro and still Groovy. Groovy will be EOL&#8217;d soon, so it&#8217;s safe to assume you can develop in ROS Hydro for a while. Note: This tutorial is for developing PR2 ROS Packages. The PR2 Debian packages tutorial can be found on (3).</p>
+<ol class="arabic simple">
+<li>Make a pr2_hydro_packages Catkin workspace. This will be used to house all of the source code for the PR2. Firstly, the directories are created and then the source directory is initialized to be a catkin workspace. There should then be a CMakeLists.txt symlink file in there.</li>
+</ol>
+<div class="code bash highlight-python"><div class="highlight"><pre> cd ~
+mkdir pr2_hydro_packages
+cd pr2_hydro_packages
+mkdir src
+cd src
+catkin_init_workspace
+cd ~
+</pre></div>
+</div>
+<ol class="arabic simple" start="2">
+<li>In what I&#8217;d like to call the staging area, clone the rosinstall file that will grab all of the relevant PR2 packages for development.</li>
+</ol>
+<div class="code bash highlight-python"><div class="highlight"><pre>cd ~/pr2_hydro_packages
+git clone https://github.com/PR2/pr2_developer_kit
+rosinstall .rosinstall
+</pre></div>
+</div>
+<ol class="arabic simple" start="3">
+<li>Move the downloaded pr2 packages into the src workspace</li>
+</ol>
+<div class="code bash highlight-python"><div class="highlight"><pre>mv * src/
+</pre></div>
+</div>
+<ol class="arabic simple" start="4">
+<li>Make these packages via catkin. As a developer, be aware of the three types of catkin_make. If one of these fails, the build will fail at release time on the build server, so it is best to always do all three when making/modifying a package to get full coverage.</li>
+</ol>
+<div class="code bash highlight-python"><div class="highlight"><pre>catkin_make
+catkin_make --install
+catkin_make test
+catkin_make --isolated
+</pre></div>
+</div>
+<ol class="arabic simple" start="5">
+<li>There you have it! All of your PR2 packages should be installed via source on your laptop. The usage is the exact same as how you would use them if installed via the package management system. There is one thing however...</li>
+<li>Setting your environment to use the source packages. You must do this or else ROS will continue to use packages from the /opt/ros/distro directory. Run this command from the ~/pr2_hydro_packages directory.</li>
+</ol>
+<div class="code bash highlight-python"><div class="highlight"><pre>source devel/setup.bash
+</pre></div>
+</div>
+<ol class="arabic simple" start="7">
+<li>For example, use the code:</li>
+</ol>
+<div class="code bash highlight-python"><div class="highlight"><pre>roslaunch pr2_gazebo pr2_empty_world.launch
+</pre></div>
+</div>
+<p>If you have a PR2, the instructions are the same assuming you&#8217;re in the home directory and it is connected to the internet.</p>
+</div>
+<div class="section" id="setting-up-a-pr2-debian-development-environment">
+<h2>Setting up a PR2 Debian Development Environment<a class="headerlink" href="#setting-up-a-pr2-debian-development-environment" title="Permalink to this headline">¶</a></h2>
+<p>By this point you should be familiar with the PR2 ROS code and understand that it is accessible via apt-get from the ROS servers or by source from the github servers. Currently, there are a couple of locations of where to get the debian code.</p>
+<p>It used to exist on SVN/Trac here <a class="reference external" href="https://code.ros.org/trac/pr2debs/browser">https://code.ros.org/trac/pr2debs/browser</a> under trunk. This repository also contains the installer. I will discuss now the way of modifying the PR2&#8217;s debian code by scratch.</p>
+<ol class="arabic simple">
+<li>Firstly, install the code from the github at <a class="reference external" href="https://github.com/pr2-debs/">https://github.com/pr2-debs/</a> and find a directory to put it into</li>
+</ol>
+<div class="code bash highlight-python"><div class="highlight"><pre>cd ~ &amp;&amp; mkdir pr2_debian_packages
+cd pr2_debian_packages
+</pre></div>
+</div>
+<ol class="arabic simple" start="2">
+<li>Install the pr2&#8217;s debian packages by cloning them onto your system. These are the debian files used for generic PR2&#8217;s. The specific debs like pr2-precise have additional debs and modifications that make it compatible for precise. For indigo, there will be a pr2-trusty.</li>
+</ol>
+<div class="code bash highlight-python"><div class="highlight"><pre>git clone https://github.com/pr2-debs/pr2
+</pre></div>
+</div>
+<ol class="arabic simple" start="3">
+<li>If you&#8217;re on 12.04, install the pr2-precise debians as well.</li>
+</ol>
+<div class="code bash highlight-python"><div class="highlight"><pre>git clone https://github.com/pr2-debs/pr2-precise
+</pre></div>
+</div>
+<ol class="arabic simple" start="4">
+<li>Note that the PR2 Debian development environment also has code for the basestation and test stations. Install the rest of these, including the installer. The installer will be talked about in a moment.</li>
+</ol>
+<div class="code bash highlight-python"><div class="highlight"><pre>git clone https://github.com/pr2-debs/wg-test-precise (This hosts the debian packages required for installing a WG Test station that are based off of 12.04)
+git clone https://github.com/pr2-debs/wg-test (Same as above, but generic packages)
+git clone https://github.com/pr2-debs/shared-precise (Packages that exist across basestation, wg-test, and PR2)
+git clone https://github.com/pr2-debs/shared (Same as above but not specific to precise)
+git clone https://github.com/pr2-debs/basestation-precise (Packages that exist only on the basestation)
+git clone https://github.com/pr2-debs/basestation (Same as above.. etc)
+git clone https://github.com/pr2-debs/other (Other packages that don&#39;t fit in the above categories)
+git clone https://github.com/pr2-debs/installer-precise (The installer for Ubuntu 12.04 basestation)
+git clone https://github.com/pr2-debs/installer (The installer for the basestation)
+</pre></div>
+</div>
+<p><strong>Key point</strong>: The installer&#8217;s output is a DVD ISO that has all of the PR2&#8217;s required packages and the basestations required packages. It is used to initialize a basestation, of which the PR2 then netboot installs itself from the basestation. No direct installation of the PR2 occurs.</p>
+<ol class="arabic simple" start="5">
+<li>A good tutorial for using/making/modifying the installers exists here <a class="reference external" href="https://pr2s.clearpathrobotics.com/wiki/Maintenance/Installer">https://pr2s.clearpathrobotics.com/wiki/Maintenance/Installer</a>.</li>
+</ol>
+</div>
+<div class="section" id="building-and-modifying-the-system-debs">
+<h2>Building And Modifying The System Debs<a class="headerlink" href="#building-and-modifying-the-system-debs" title="Permalink to this headline">¶</a></h2>
+<p>Originally, when I first built the PR2&#8217;s debs again from source I followed this tutorial written by Austin Hendrix <a class="reference external" href="https://pr2s.clearpathrobotics.com/wiki/Maintenance/DebOverview">https://pr2s.clearpathrobotics.com/wiki/Maintenance/DebOverview</a> to get a good overview of what was going on. <a class="reference external" href="https://pr2s.clearpathrobotics.com/wiki/Maintenance/SystemDebs">https://pr2s.clearpathrobotics.com/wiki/Maintenance/SystemDebs</a> has the host of tutorials that walk you through building the debs. The process is the same, however the code is taken from Github and not SVN, and has not quite been automated yet. In the next section Building The System Debs I will cover all that you need to know for that.</p>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="BuildingPR2Debians.html" class="btn btn-neutral float-right" title="Building PR2 Debians" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="DebuggingPR2Software.html" class="btn btn-neutral" title="Debugging the PR2’s Software" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2015, Clearpath Robotics.
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'0.5.1',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>
