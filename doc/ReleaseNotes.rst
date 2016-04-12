@@ -34,3 +34,8 @@ the sensors on C2 with a hub (shipped via clearpath) into the top USB port on C2
 was missing the cdc-acm and ftdi-sio modules which prevented USB usage.
 -> Wireless capabilities disabled still. Fix pending.
 
+Patch notes for release 3.19.0-49 (April 6th, 2016) 
+==================================================================
+-> Regression causing c2 not to boot
+-> Wireless still not working
+
