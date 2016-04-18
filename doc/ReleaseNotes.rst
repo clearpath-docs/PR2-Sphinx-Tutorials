@@ -25,7 +25,7 @@ Patch notes for release 3.19.0-49 (March 22nd, 2016)
 -> Dashboard and RViz for reviewing the robots state
 
 
-Patch notes for release 3.19.0-49 (March 24th, 2016) (Suggested)
+Patch notes for release 3.19.0-49 (March 24th, 2016)
 ==================================================================
 
 -> All of the advancements above, including the ability to use
@@ -39,3 +39,9 @@ Patch notes for release 3.19.0-49 (April 6th, 2016)
 -> Regression causing c2 not to boot
 -> Wireless still not working
 
+Patch notes for release 3.19.0-49 (April 15th, 2016) (Suggested)
+==================================================================
+-> Regression fixed c2 not booting. Now boots correctly without 50% chance of it working due to race conditions in the network interface names on boot
+-> Left arm starts on calibration
+-> Sensors enabled with units that are using an external USB from top hub of C2
+-> Sensor data, battery data, all working/running through C2
