@@ -45,3 +45,4 @@ Patch notes for release 3.19.0-49 (April 15th, 2016) (Suggested)
 -> Left arm starts on calibration
 -> Sensors enabled with units that are using an external USB from top hub of C2
 -> Sensor data, battery data, all working/running through C2
+-> Changed C2 to use 3.19.0-42-lowlatency kernel because it both includes the necessary sensor modules, and it fixes some realtime errors
