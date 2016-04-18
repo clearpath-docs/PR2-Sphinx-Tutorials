@@ -1,5 +1,5 @@
 Release Notes
-===============
+=============== 
 
 Patch notes for release 3.18.7-rt1 (March 10th, 2016)
 -----------------------------------------------------------
@@ -28,33 +28,23 @@ Patch notes for release 3.19.0-49 (March 22nd, 2016)
 * Dashboard and RViz for reviewing the robots state
 
 
-<<<<<<< HEAD
 Patch notes for release 3.19.0-49 (March 24th, 2016) (Suggested)
 --------------------------------------------------------------------
-=======
-Patch notes for release 3.19.0-49 (March 24th, 2016)
-==================================================================
->>>>>>> 64402f4c665241a035a6b65073e77c2d311486c9
 
-* All of the advancements above, including the ability to use
-the sensors on C2 with a hub (shipped via clearpath) into the top USB port on C2
-* A big bug fix which included regressing to a 3.19.0-42 kernel point release because the other version
-was missing the cdc-acm and ftdi-sio modules which prevented USB usage.
-<<<<<<< HEAD
+* All of the advancements above, including the ability to use the sensors on C2 with a hub (shipped via clearpath) into the top USB port on C2
+* A big bug fix which included regressing to a 3.19.0-42 kernel point release because the other version was missing the cdc-acm and ftdi-sio modules which prevented USB usage.
 * Wireless capabilities disabled still. Fix pending.
-=======
--> Wireless capabilities disabled still. Fix pending.
+
 
 Patch notes for release 3.19.0-49 (April 6th, 2016) 
-==================================================================
--> Regression causing c2 not to boot
--> Wireless still not working
+-------------------------------------------------------
+* Regression causing c2 not to boot
+* Wireless still not working
 
 Patch notes for release 3.19.0-49 (April 15th, 2016) (Suggested)
-==================================================================
--> Regression fixed c2 not booting. Now boots correctly without 50% chance of it working due to race conditions in the network interface names on boot
--> Left arm starts on calibration
--> Sensors enabled with units that are using an external USB from top hub of C2
--> Sensor data, battery data, all working/running through C2
--> Changed C2 to use 3.19.0-42-lowlatency kernel because it both includes the necessary sensor modules, and it fixes some realtime errors
->>>>>>> 64402f4c665241a035a6b65073e77c2d311486c9
+------------------------------------------------------------------
+* Regression fixed c2 not booting. Now boots correctly without 50% chance of it working due to race conditions in the network interface names on boot
+* Left arm starts on calibration
+* Sensors enabled with units that are using an external USB from top hub of C2
+* Sensor data, battery data, all working/running through C2
+* Changed C2 to use 3.19.0-42-lowlatency kernel because it both includes the necessary sensor modules, and it fixes some realtime errors >>>>>>> 64402f4c665241a035a6b65073e77c2d311486c9

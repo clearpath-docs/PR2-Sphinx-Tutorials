@@ -1,5 +1,5 @@
 Reinstalling the PR2 (Fix)
-===========================
+=========================== 
 
 When packages.willowgarage.com went down, the original installer was broken that was looking towards the packages.willowgarage.comrepository. A hack below will allow you to modify the system yourself to make sure the install to Groovy/Precise12.04 works and your robot is at the most recent version. Fixes will be made to the relevant debian files and pushed out on the repo soon, in the case that they have not been, then this is the place to look. (As of Nov 20, 2014 they have not been pushed to the reprepro repo located at http://54.68.185.13/pr2-dev/ubuntuand you are using the only working install method). Any errors or problems that arise can be articulated to Clearpath Robotics via the Willow Garage Zendesk located at http://wgsupport.willowgarage.com/tickets/new
 

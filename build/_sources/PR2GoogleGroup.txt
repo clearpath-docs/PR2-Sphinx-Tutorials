@@ -1,5 +1,5 @@
 PR2 Google Group & PR2 Mailing List
-=====================================
+===================================== 
 
 `Subscribe <https://groups.google.com/forum/?hl=en#!forum/pr2_users>`_ to the PR2 Google group!
 

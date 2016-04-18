@@ -27,7 +27,7 @@ on the website wiki at https://clearpathrobotics.com/guides/pr2/ReleaseNotes. Ho
 6. Extract the contents of the .tar.gz and put them onto a USB (copy and paste). Make sure the USB is empty before you do this. You are now ready to install your PR2 Trusty Indigo with Clonezilla!
 
 
-Installing The .tar.gz contents onto the PR2 Computer:
+Installing The .tar.gz contents onto the PR2 Computer
 --------------------------------------------------------
 
 1. If you have completed above, follow these prompts to get the contents installed:
@@ -60,7 +60,7 @@ To pull new PR2 Trusty Debian packages:
 pr2-environment as it may make your system unusable.
 	
 
-Additionally:
+Additionally
 -----------------------------
 
 The start sequence to launch the robot has changed:

@@ -1,5 +1,5 @@
 Indigo Checklist
-=================
+================= 
 
 1.  Community survey/data collection (DONE)
 2.  Formulation of release cycle (DONE)
@@ -43,7 +43,7 @@ Indigo Checklist
 
 
 Outstanding items:
-==================
+--------------------
 
 
 1.  Run navigation stack on Indigo

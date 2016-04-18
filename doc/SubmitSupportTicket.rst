@@ -1,5 +1,5 @@
 Submit a Support Ticket
-=========================
+========================= 
 
 `Click here <http://willowgarage.zendesk.com/>`_ to submit a support ticket through Zendesk
 

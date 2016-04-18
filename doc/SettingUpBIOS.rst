@@ -1,5 +1,5 @@
 Setting Up the BIOS for Netbooting
-==================================
+==================================  
 
 1. Turn on the computer and as you see the ASRock logo come up on the display, hit F2 repeatedly to enter the UEFI menu.
 2. In the UEFI menu, navigate to the "Tools" menu using the left and right arrow keys. Once in the menu, use the up and down arrow keys to get to "Boot Manager" and press enter.

@@ -1,4 +1,4 @@
-Debugging the PR2's Software
+Debugging the PR2's Software 
 ===============================
 
 When looking for specific files on the PR2 or any system, or something related to a keyword:

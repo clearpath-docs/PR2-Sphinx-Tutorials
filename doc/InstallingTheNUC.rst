@@ -1,5 +1,5 @@
 Installing an Image to the NUC
-===============================
+=============================== 
 
 The process to install a previously-cloned image to the NUC is quite simple. All that is required are two USBs.
 

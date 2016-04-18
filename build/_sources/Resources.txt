@@ -1,5 +1,5 @@
 Resources
-===========
+===========  
 
 This page should be the first page landed on if you are a new-comer or wanting to be directed to reading resources, tutorials, exercises, or explanations. The resources will be readings and places you can go to find more information about why and how the structures are implemented. It will not explain the specific implementation, but it will give a general idea of the concepts used to derive that implementation. I will try to cover most of the things used in the day-to-day activities while servicing the PR2's software. All in all, these are all responsibilities of the OSSE engineer. You must maintain, make announcements, document, develop, and release resources pertaining to everything below, and reading everything here is essential to excelling and succeeding in this position
 

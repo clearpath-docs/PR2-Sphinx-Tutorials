@@ -1,5 +1,5 @@
 PR2 Tutorials
-================
+=============== 
 
 
 .. image:: chd-86.jpg
@@ -43,7 +43,6 @@ PR2 Tutorials
     PR2ServicePortDiagnosis.rst
     UpdatingSourcesList.rst
     InstallingROSHydro.rst
-    InstallingPR2Indigo.rst
     InstallingPR2Trusty.rst
     InstallingPR2TrustyUnsupported.rst
     SettingUpBIOS.rst

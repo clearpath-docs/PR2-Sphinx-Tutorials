@@ -1,5 +1,5 @@
 Willow Garage to Clearpath Robotics PR2 Transition FAQ
-=======================================================
+=======================================================  
 
 1. The pr2-users mailman mailing list server is no longer online. That medium of communication was replaced by the pr2-users Google group located here: https://groups.google.com/forum/#!forum/pr2_users. Access is by request and is usually accepted within 2-5 minutes during EST daylight hours.
 

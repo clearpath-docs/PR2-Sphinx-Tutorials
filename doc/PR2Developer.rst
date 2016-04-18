@@ -1,5 +1,5 @@
 PR2 Developer Environment
-===========================
+=========================== 
 
 You're all ready to set up the developer environment. What is required? Just a laptop. That's right. Unless you want to install source code directly onto the PR2. I'll go over that too. That brings us two sections for this tutorial.
 

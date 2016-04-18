@@ -1,5 +1,5 @@
 Releasing a PR2 ROS Package
-=============================
+============================= 
 
 Clone the PR2's ROS repository located at https://github.com/pr2/
 

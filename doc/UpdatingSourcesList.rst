@@ -1,5 +1,5 @@
 Updating the Sources List for PR2 Debian Packages
-===================================================
+=================================================== 
 
 There are two working debian package servers for the PR2. When packages.willowgarage.com went down, there was a lot of confusion as to where to update/upgrade from. By having two repositories at this moment, we hope to eliminate the possibility that both are down and the community is unable to use the PR2 platform. In the future, we will have set up a back-up of the pr2packages.clearpathrobotics.com repository as well.
 
