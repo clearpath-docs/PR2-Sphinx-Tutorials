@@ -1,0 +1,360 @@
+
+
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Resources &mdash; PR2 Tutorials 0.5.1 documentation</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="_static/favicon.ico"/>
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="_static/clearpath.css" type="text/css" />
+  
+
+  
+    <link rel="top" title="PR2 Tutorials 0.5.1 documentation" href="index.html"/>
+        <link rel="next" title="Debugging the PR2’s Software" href="DebuggingPR2Software.html"/>
+        <link rel="prev" title="PR2 Tutorials" href="index.html"/> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+  <!-- Start of clearpathrobotics Zendesk Widget script -->
+<script>/*<![CDATA[​*/window.zEmbed||function(e,t){var n,o,d,i,s,a=[],r=document.createElement("iframe");window.zEmbed=function(){a.push(arguments)},window.zE=window.zE||window.zEmbed,r.src="javascript:false",r.title="",r.role="presentation",(r.frameElement||r).style.cssText="display: none",d=document.getElementsByTagName("script"),d=d[d.length-1],d.parentNode.insertBefore(r,d),i=r.contentWindow,s=i.document;try{o=s}catch(c){n=document.domain,r.src='javascript:var d=document.open();d.domain="'+n+'";void(0);',o=s}o.open()._l=function(){var o=this.createElement("script");n&&(this.domain=n),o.id="js-iframe-async",o.src=e,this.t=+new Date,this.zendeskHost=t,this.zEQueue=a,this.body.appendChild(o)},o.write('<body onload="document._l();">'),o.close()}("https://assets.zendesk.com/embeddable_framework/main.js","clearpathrobotics.zendesk.com");/*​]]>*/</script>
+<!-- End of clearpathrobotics Zendesk Widget script -->
+
+<script>
+ (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+ (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+ m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+ })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ ga('create', 'UA-65409991-1', 'auto');
+ ga('send', 'pageview');
+
+</script>
+
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html" class="icon icon-home"> PR2 Tutorials
+          
+
+          
+            
+            <img src="_static/clearpathlogo.png" class="logo" />
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.5.1
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search..." />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul class="simple">
+</ul>
+<p class="caption"><span class="caption-text">Getting Started with PR2 Development</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="">Resources</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#understanding-debian-packages">Understanding Debian Packages</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#understanding-the-pr2-github-repos">Understanding The PR2 Github Repos</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#understanding-the-ros-package-release-process">Understanding The ROS Package Release Process</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#understanding-the-catkin-build-process">Understanding The Catkin Build Process</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#understanding-the-pr2-system-debian-repository">Understanding The PR2 System Debian Repository</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#useful-knowledge-bases-for-the-pr2-s-software">Useful Knowledge Bases For The PR2&#8217;s Software</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#what-is-ethercat">What is EtherCAT?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#the-original-pr2-wiki">The Original PR2 Wiki</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#the-clearpath-pr2-documentation">The Clearpath PR2 Documentation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#the-pr2-manual">The PR2 Manual</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#existing-pr2-debian-repositories">Existing PR2 Debian Repositories</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="DebuggingPR2Software.html">Debugging the PR2&#8217;s Software</a></li>
+<li class="toctree-l1"><a class="reference internal" href="PR2Developer.html">PR2 Developer Environment</a></li>
+<li class="toctree-l1"><a class="reference internal" href="BuildingPR2Debians.html">Building PR2 Debians</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ReleasingROSPackage.html">Releasing a PR2 ROS Package</a></li>
+</ul>
+<p class="caption"><span class="caption-text">PR2 Support</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="WillowGarageTransition.html">Willow Garage to Clearpath Robotics PR2 Transition FAQ</a></li>
+<li class="toctree-l1"><a class="reference internal" href="PR2 Safety.html">PR2 Safety</a></li>
+<li class="toctree-l1"><a class="reference internal" href="SubmitSupportTicket.html">Submit a Support Ticket</a></li>
+<li class="toctree-l1"><a class="reference internal" href="PR2GoogleGroup.html">PR2 Google Group &amp; PR2 Mailing List</a></li>
+<li class="toctree-l1"><a class="reference internal" href="PR2Downloads.html">PR2 Downloads</a></li>
+<li class="toctree-l1"><a class="reference internal" href="PR2Repairs.html">PR2 Repairs</a></li>
+</ul>
+<p class="caption"><span class="caption-text">PR2 Software</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="IndigoChecklist.html">Indigo Checklist</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ReinstallingPR2.html">Reinstalling the PR2 (Fix)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="PR2ServicePortDiagnosis.html">PR2 Service Port Diagnosis and Remove KVM</a></li>
+<li class="toctree-l1"><a class="reference internal" href="UpdatingSourcesList.html">Updating the Sources List for PR2 Debian Packages</a></li>
+<li class="toctree-l1"><a class="reference internal" href="InstallingROSHydro.html">Installing ROS Hydro on a PR2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="InstallingPR2Trusty.html">Installing ROS Indigo on a PR2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="InstallingPR2TrustyUnsupported.html">Installing PR2 Trusty on An Unsupported Computer</a></li>
+<li class="toctree-l1"><a class="reference internal" href="SettingUpBIOS.html">Setting Up the BIOS for Netbooting</a></li>
+<li class="toctree-l1"><a class="reference internal" href="InstallingTheNUC.html">Installing an Image to the NUC</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ReleaseNotes.html">Release Notes</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="index.html">PR2 Tutorials</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+     
+          
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="http://support.clearpathrobotics.com">Home</a> &raquo;</li>
+      
+    <li>Resources</li>
+      <li class="wy-breadcrumbs-aside">
+        <div class="roslogo">
+      </div>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="resources">
+<h1>Resources<a class="headerlink" href="#resources" title="Permalink to this headline">¶</a></h1>
+<p>This page should be the first page landed on if you are a new-comer or wanting to be directed to reading resources, tutorials, exercises, or explanations. The resources will be readings and places you can go to find more information about why and how the structures are implemented. It will not explain the specific implementation, but it will give a general idea of the concepts used to derive that implementation. I will try to cover most of the things used in the day-to-day activities while servicing the PR2&#8217;s software. All in all, these are all responsibilities of the OSSE engineer. You must maintain, make announcements, document, develop, and release resources pertaining to everything below, and reading everything here is essential to excelling and succeeding in this position</p>
+<div class="section" id="understanding-debian-packages">
+<h2>Understanding Debian Packages<a class="headerlink" href="#understanding-debian-packages" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><a class="reference external" href="https://www.debian.org/doc/manuals/debian-faq/ch-pkg_basics.en.html">What is a debian package</a></li>
+<li><a class="reference external" href="https://www.debian.org/doc/manuals/apt-howto/ch-sourcehandling.en.html">How to make a debian package from source</a></li>
+</ul>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">A debian package installs files and modifies the structure of the system that it is installed on. To make a debian package, include a debian sub-folder in that directory. The debian sub-folder will contain files that document things about that debian package such as its version, how it is to be distributed, what files to include, what commands to run before and after installation. The command that makes it, e.g &#8220;dpkg-buildpackage&#8221; should be run inside the directory that you want to turn into a debian package. Parameters to this command can also generate the source debian packages (.dsc files).</p>
+</div>
+</div>
+<div class="section" id="understanding-the-pr2-github-repos">
+<h2>Understanding The PR2 Github Repos<a class="headerlink" href="#understanding-the-pr2-github-repos" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><a class="reference external" href="https://try.github.io/levels/1/challenges/1">Quick 15 minute tutorial to learn git</a></li>
+<li><a class="reference external" href="https://github.com/PR2/">https://github.com/PR2/</a> is the repository for the PR2 ROS packages. It contains the source code for ROS packages. In each package, there will be a package.xml and a CMakeLists.txt. If there is a repository that also has a folder with the same name as that repository, then this repository contains a metapackage. A metapackage is a collection of packages.</li>
+<li><a class="reference external" href="https://github.com/pr2-debs/">https://github.com/pr2-debs/</a> is the repository for the PR2 Debian packages. It contains the source debian packages. To make modifications to someone&#8217;s PR2 system debian packages, modify these and upload them to the PR2&#8217;s system debian repository.</li>
+<li><a class="reference external" href="https://github.com/pr2-gbp/">https://github.com/pr2-gbp/</a> is the release repository for the <a class="reference external" href="https://github.com/PR2/">https://github.com/PR2/</a> ROS packages. Some packages may be released in <a class="reference external" href="https://github.com/ros-gbp/">https://github.com/ros-gbp/</a>.</li>
+</ul>
+<p>To understand these repositories, understand that they were originally hosted on SVN and were ported over during the WG-&gt;CpR transition. These can be found at <a class="reference external" href="https://code.ros.org/trac/pr2debs/browser/trunk">https://code.ros.org/trac/pr2debs/browser/trunk</a> for the system debians for the PR2.</p>
+<p>It includes all the packages and the source for the installer for the basestation.</p>
+</div>
+<div class="section" id="understanding-the-ros-package-release-process">
+<h2>Understanding The ROS Package Release Process<a class="headerlink" href="#understanding-the-ros-package-release-process" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>Read the <a class="reference external" href="http://bloom.readthedocs.org/en/0.5.7/">bloom documentation</a> and know what packages should be released (PR2 Packages).</li>
+<li>Read the <a class="reference external" href="https://support.clearpathrobotics.com/hc/admin/articles/%20http:/wiki.ros.org/bloom">ROS wiki page on bloom</a>.</li>
+<li>The Build farm will tell you what packages have been released, the <a class="reference external" href="http://www.ros.org/debbuild/hydro.html">BuildFarm for Hydro</a></li>
+<li>To test a released package and see if it can be compiled/ a debian be created, use the <a class="reference external" href="http://prerelease.ros.org/select_distro">prerelease server</a>.</li>
+<li>Documentation on how to use the pre-release can be found <a class="reference external" href="http://wiki.ros.org/bloom/Tutorials/PrereleaseTest">here</a>.</li>
+</ul>
+<p>Understand that before a package is released, there are three commands that will help testing locally: (1) catkin_make test, (2) catkin_make install, and (3) catkin_make &#8211;isolated. All of these should be run during compilation to capture all the bugs. See the catkin documentation to make sure your dependencies are set up correctly.</p>
+</div>
+<div class="section" id="understanding-the-catkin-build-process">
+<h2>Understanding The Catkin Build Process<a class="headerlink" href="#understanding-the-catkin-build-process" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><a class="reference external" href="http://docs.ros.org/hydro/api/catkin/html/">The official catkin documentation</a></li>
+<li><a class="reference external" href="http://wiki.ros.org/catkin">Catkin ROS documentation</a></li>
+<li><a class="reference external" href="http://wiki.ros.org/hydro/Migration">Migrating notes from Groovy to Hydro</a></li>
+<li>JBohren&#8217;s excellent catkin guides: <a class="reference external" href="http://jbohren.com/articles/gentle-catkin-intro">Intro</a>, <a class="reference external" href="http://jbohren.com/articles/modular-ros-packages/">Modular ROS Packages</a></li>
+</ul>
+</div>
+<div class="section" id="understanding-the-pr2-system-debian-repository">
+<h2>Understanding The PR2 System Debian Repository<a class="headerlink" href="#understanding-the-pr2-system-debian-repository" title="Permalink to this headline">¶</a></h2>
+<p>This is the second repository you should know about. The PR2 software exists on two repositories. The <a class="reference external" href="https://github.com/PR2">ROS repository</a> and the <a class="reference external" href="http://pr2packages.clearpathrobotics.com/">system repository</a>. The Ubuntu Amazon EC2 Instance hosts a Nginx webserver that indexes the reprepro files and reprepro indexes and maintains the package management. To take this over and understand what is going on, I suggest reading about Amazon EC2, adding ssh-keys (to login to the EC2 server), Nginx, and reprepro. The packages are also signed, and so GPG and package signing should be understood.</p>
+<ul class="simple">
+<li><a class="reference external" href="https://wikitech.wikimedia.org/wiki/Reprepro">Reprepro</a>: In short for this, you will have to know how to officially add a debian package to a repository, to stage a package, to remove, and to export the packages. Exporting the packages makes them publicly available. Importing them adds them to the package management system. Removing them removes them from the system. Staging them holds them in a directory that will be merged later into the package management system.</li>
+<li><a class="reference external" href="https://www.linode.com/docs/websites/nginx/basic-nginx-configuration">Nginx</a>. Nginx is a web server just like Apache2, but I found it to be much simpler and it looks nicer as well. The bugs are also more conclusive.</li>
+<li><a class="reference external" href="https://www.digitalocean.com/community/tutorials/how-to-set-up-ssh-keys--2">SSH Keys</a>. you will have to add the .pem key to your keys list to access the EC2 instance.</li>
+<li>Using an <a class="reference external" href="http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EC2_GetStarted.html">Amazon EC2 Server</a>. It&#8217;s good to get the gist of whats going on.</li>
+<li><a class="reference external" href="https://wiki.debian.org/Keysigning">Understanding GPG signing</a>.</li>
+</ul>
+</div>
+<div class="section" id="useful-knowledge-bases-for-the-pr2-s-software">
+<h2>Useful Knowledge Bases For The PR2&#8217;s Software<a class="headerlink" href="#useful-knowledge-bases-for-the-pr2-s-software" title="Permalink to this headline">¶</a></h2>
+<p>In short, the ROS wiki has many tutorials on administrating the PR2 (The stuff a person providing software support should know) <a class="reference external" href="http://wiki.ros.org/pr2_robot/Tutorials">http://wiki.ros.org/pr2_robot/Tutorials</a> .</p>
+<p>PR2 software usage documentation is best found by going to wiki.ros.org/package_name where package_name is the name of the package you want details about.</p>
+<p>This page, under header &#8220;High-level-capabilities&#8221; provides good links towards info on the PR2. <a class="reference external" href="http://wiki.ros.org/Robots/PR2">http://wiki.ros.org/Robots/PR2</a></p>
+</div>
+<div class="section" id="what-is-ethercat">
+<h2>What is EtherCAT?<a class="headerlink" href="#what-is-ethercat" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><a class="reference external" href="http://wiki.ros.org/pr2_etherCAT/Tutorials/Running">An example of running the PR2 etherCAT</a></li>
+<li><a class="reference external" href="http://wiki.ros.org/ethercat_hardware">Ethercat hardware tutorials and documentation</a> and the <a class="reference external" href="http://wiki.ros.org/ethercat_hardware/Tutorials">tutorials related to the hardware</a></li>
+<li>Essentially, etherCAT is like ethernet but with less wires. It is no different in paradigm than debugging an ethernet network.</li>
+<li>Ethercat overview from <a class="reference external" href="http://www.tech-faq.com/ethercat.html">their website</a></li>
+</ul>
+</div>
+<div class="section" id="the-original-pr2-wiki">
+<h2>The Original PR2 Wiki<a class="headerlink" href="#the-original-pr2-wiki" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>Clearpath Robotics is soon moving towards deprecating the PR2 support wiki in favor for hosting the resources entirely on the Clearpath Robotics website.</li>
+<li>The old wiki (PR2 Support) is hosted <a class="reference external" href="http://pr2s.clearpathrobotics.com/wiki/">here</a></li>
+</ul>
+</div>
+<div class="section" id="the-clearpath-pr2-documentation">
+<h2>The Clearpath PR2 Documentation<a class="headerlink" href="#the-clearpath-pr2-documentation" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>Of particular interest is the <a class="reference external" href="http://www.clearpathrobotics.com/pr2/downloads/">downloads page</a></li>
+<li>and the new <a class="reference external" href="https://support.clearpathrobotics.com/hc/en-us/categories/200217239-PR2">knowledge base page</a></li>
+</ul>
+</div>
+<div class="section" id="the-pr2-manual">
+<h2>The PR2 Manual<a class="headerlink" href="#the-pr2-manual" title="Permalink to this headline">¶</a></h2>
+<p>A powerful <a class="reference external" href="http://www.clearpathrobotics.com/wp-content/uploads/2014/08/pr2_manual_r321.pdf%20">resource originating from the WG days</a> that describes how the technical side of the PR2 works.</p>
+</div>
+<div class="section" id="existing-pr2-debian-repositories">
+<h2>Existing PR2 Debian Repositories<a class="headerlink" href="#existing-pr2-debian-repositories" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>This is the most modern packages repository for the PR2. It hosts all the system debians but at the moment they only exist on the pr2-dev branch. After the Hydro release Dec 1, full installs will be available from the 0.6.2 pr2-release branch</li>
+<li><a class="reference external" href="http://packages.willowgarage.com">http://packages.willowgarage.com</a> once was the main source of software for the PR2 realm. It no longer works since the server went offline. Ilia brought it back up and hosted it on a S3, however S3 treats filenames weird and this broke the repo. <a class="reference external" href="http://packages.willowgarage.s3-website-us-east-1.amazonaws.com">http://packages.willowgarage.s3-website-us-east-1.amazonaws.com</a></li>
+</ul>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="DebuggingPR2Software.html" class="btn btn-neutral float-right" title="Debugging the PR2’s Software" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="index.html" class="btn btn-neutral" title="PR2 Tutorials" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2015, Clearpath Robotics.
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'0.5.1',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>
