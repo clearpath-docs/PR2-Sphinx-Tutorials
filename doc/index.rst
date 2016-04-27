@@ -48,6 +48,7 @@ PR2 Tutorials
     SettingUpBIOS.rst
     InstallingTheNUC.rst
     ReleaseNotes.rst
+    ReleaseVersions.rst
 
 
 
